@@ -2897,7 +2897,7 @@ ul.custom-bullet-list.custom-icon li:before {
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  background: #ff9696;
+  background: #212635;
 }
 .highlight-carousel:hover .owl-nav {
   opacity: 1;
@@ -3151,7 +3151,7 @@ ul.custom-bullet-list.custom-icon li:before {
   font-weight: 700;
 }
 .service-block-1:hover h3:after {
-  background: #ff9696;
+  background: #212635;
   width: 24px;
   left: 50%;
   margin-left: -12px;
@@ -3269,7 +3269,7 @@ ul.custom-bullet-list.custom-icon li:before {
   font-size: 14px;
 }
 .service-block-2:hover h3:after {
-  background: #ff9696;
+  background: #212635;
   width: 24px;
   left: 50%;
   margin-left: -12px;
@@ -3383,7 +3383,7 @@ ul.custom-bullet-list.custom-icon li:before {
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  background: #ff9696;
+  background: #212635;
 }
 .service-carousel:hover .owl-nav {
   opacity: 1;
@@ -3644,7 +3644,7 @@ ul.custom-bullet-list.custom-icon li:before {
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  background: #ff9696;
+  background: #212635;
 }
 .team-carousel:hover .owl-nav {
   opacity: 1;
@@ -4086,7 +4086,7 @@ ul.custom-bullet-list.custom-icon li:before {
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  background: #ff9696;
+  background: #212635;
 }
 .testimonial-container.text-left img {
   display: inline-block;
@@ -4825,7 +4825,7 @@ a.btn-cta-2:hover {
   transition: all 0.5s ease-in-out;
 }
 .logo-layout-1 .client-logo:hover {
-  border: 1px dotted #ff9696;
+  border: 1px dotted #212635;
 }
 .logo-layout-1 .client-logo:hover img {
   opacity: 1;
@@ -4935,7 +4935,7 @@ a.btn-cta-2:hover {
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  background: #ff9696;
+  background: #212635;
 }
 .logo-items:hover .owl-nav {
   opacity: 1;
@@ -5999,7 +5999,7 @@ ul.pagination li:last-child {
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  background: #ff9696;
+  background: #212635;
 }
 .gallery-carousel:hover .owl-nav {
   opacity: 1;
