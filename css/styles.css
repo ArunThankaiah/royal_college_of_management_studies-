@@ -1091,7 +1091,7 @@ a.btn-about:hover {
   color: #111111;
 }
 .top-bar.light-layout a,
-.top-bar.light-layout a i.fa {
+.top-bar.light-layout a i.fa-brands {
   color: #111111;
 }
 .top-bar.light-layout a.free-estimate {
@@ -1152,7 +1152,7 @@ a.free-estimate:hover {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.top-bar-social a i.fa {
+.top-bar-social a i.fa-brands {
   width: 24px;
   height: 24px;
   text-align: center;
@@ -1162,7 +1162,7 @@ a.free-estimate:hover {
   position: relative;
   top: -2px;
 }
-.top-bar-social a:hover i.fa {
+.top-bar-social a:hover i.fa-brands {
   color: #b2292a;
 }
 .top-bar-social.square-layout a i {
@@ -1175,7 +1175,7 @@ a.free-estimate:hover {
   -moz-background-clip: padding;
   background-clip: padding-box;
 }
-.top-bar-social.square-layout a:hover i.fa {
+.top-bar-social.square-layout a:hover i.fa-brands {
   color: #111111 !important;
 }
 .top-bar-social.semi-rounded-layout a i {
@@ -1188,7 +1188,7 @@ a.free-estimate:hover {
   -moz-background-clip: padding;
   background-clip: padding-box;
 }
-.top-bar-social.semi-rounded-layout a:hover i.fa {
+.top-bar-social.semi-rounded-layout a:hover i.fa-brands {
   color: #111111 !important;
 }
 .top-bar-social.rounded-layout a i {
@@ -1490,6 +1490,7 @@ a.nav-btn-highlight:hover {
   position: relative;
   overflow: hidden;
   margin-top: 4px;
+  
 }
 .main-header-2 .top-bar-social a {
   display: inline-block;
@@ -1509,10 +1510,11 @@ a.nav-btn-highlight:hover {
   -moz-background-clip: padding;
   background-clip: padding-box;
 }
-.main-header-2 .top-bar-social a i.fa {
+.main-header-2 .top-bar-social a i.fa-brands {
   color: #111111;
+  /* font-size: 20px; */
 }
-.main-header-2 .top-bar-social a:hover i.fa {
+.main-header-2 .top-bar-social a:hover i.fa-brands {
   color: #b2292a;
 }
 .main-header-2 .top-bar-social a:last-child {
@@ -1748,7 +1750,7 @@ a.nav-btn-highlight:hover {
   color: #ffffff;
   display: inline-block;
 }
-.main-header-2 .navbar-contact .contact-support i.fa {
+.main-header-2 .navbar-contact .contact-support i.fa-brands {
   color: #b2292a;
   font-size: 24px;
   margin-right: 6px;
@@ -2705,7 +2707,7 @@ ul.custom-bullet-list.custom-icon li:before {
   display: inline-block !important;
   clear: both;
 }
-.highlight-layout-1 figure i.fa {
+.highlight-layout-1 figure i.fa-brands {
   font-size: 42px;
 }
 .highlight-layout-1 h5 {
@@ -2911,7 +2913,7 @@ ul.custom-bullet-list.custom-icon li:before {
   margin: 42px 0 24px;
   padding: 42px 24px;
 }
-.info-box-layout-1 span.fa {
+.info-box-layout-1 span.fa-brands {
   font-size: 24px;
   left: 50%;
   width: 42px;
@@ -2960,7 +2962,7 @@ ul.custom-bullet-list.custom-icon li:before {
 .info-box-layout-1:hover {
   background: #fbfbfb;
 }
-.info-box-layout-1:hover span.fa {
+.info-box-layout-1:hover span.fa-brands {
   color: #ffffff;
   background: #ff1717;
 }
@@ -3036,7 +3038,7 @@ ul.custom-bullet-list.custom-icon li:before {
   margin-bottom: 24px;
   padding: 42px 24px;
 }
-.info-box-layout-3 span.fa {
+.info-box-layout-3 span.fa-brands {
   font-size: 36px;
   right: 12px;
   top: 24px;
@@ -3085,7 +3087,7 @@ ul.custom-bullet-list.custom-icon li:before {
   -moz-background-clip: padding;
   background-clip: padding-box;
 }
-.info-box-layout-3:hover span.fa {
+.info-box-layout-3:hover span.fa-brands {
   color: #b2292a;
   transform: rotateY(360deg);
   opacity: 0.2;
@@ -3117,7 +3119,7 @@ ul.custom-bullet-list.custom-icon li:before {
 .service-block-1 figure img {
   opacity: 0.9;
 }
-.service-block-1 figure span.fa {
+.service-block-1 figure span.fa-brands {
   position: absolute;
   width: 60px;
   height: 60px;
@@ -3162,7 +3164,7 @@ ul.custom-bullet-list.custom-icon li:before {
 .service-block-1:hover figure img {
   opacity: 1;
 }
-.service-block-1:hover figure span.fa {
+.service-block-1:hover figure span.fa-brands {
   position: absolute;
   width: 60px;
   height: 60px;
@@ -3223,7 +3225,7 @@ ul.custom-bullet-list.custom-icon li:before {
   opacity: 0.35;
   content: "";
 }
-.service-block-2 figure span.fa {
+.service-block-2 figure span.fa-brands {
   position: absolute;
   width: 48px;
   height: 48px;
@@ -3284,7 +3286,7 @@ ul.custom-bullet-list.custom-icon li:before {
 .service-block-2:hover figure:after {
   opacity: 0.5;
 }
-.service-block-2:hover figure span.fa {
+.service-block-2:hover figure span.fa-brands {
   transform: scale(1);
 }
 .service-carousel {
@@ -3414,7 +3416,7 @@ ul.custom-bullet-list.custom-icon li:before {
   width: 72px;
   height: 72px;
 }
-.process-step-1 i.fa {
+.process-step-1 i.fa-brands {
   font-size: 72px;
 }
 .process-step-1 h3 {
@@ -3668,7 +3670,7 @@ ul.custom-bullet-list.custom-icon li:before {
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-.counter-block-1 .fa {
+.counter-block-1 .fa-brands {
   display: block;
   color: #b2292a;
   opacity: 1;
@@ -3695,10 +3697,10 @@ ul.custom-bullet-list.custom-icon li:before {
   font-size: 32px;
   font-weight: 600;
 }
-.counter-block-1:hover .fa {
+.counter-block-1:hover .fa-brands {
   opacity: 0.9;
 }
-.counter-block-1.light-counter-layout .fa,
+.counter-block-1.light-counter-layout .fa-brands,
 .counter-block-1.light-counter-layout .counter,
 .counter-block-1.light-counter-layout .counter-postfix,
 .counter-block-1.light-counter-layout p {
@@ -4953,7 +4955,7 @@ a.btn-cta-2:hover {
   border-radius: 0px !important;
   margin: 3px 3px;
 }
-.btn-social-icon .fa {
+.btn-social-icon .fa-brands {
   line-height: 42px;
   color: #ffffff;
 }
@@ -6242,7 +6244,7 @@ footer .social-icons a:hover {
 }
 .footer-widget-area .footer-useful-links li {
   margin-bottom: 3px;
-  width: 50%;
+  width: 100%;
   float: left;
 }
 .footer-widget-area .footer-about {

@@ -1071,19 +1071,20 @@ jQuery(function ($) {
         var map;
 
         $('#map_canvas').css({
-            'height': '400px'
+            'height': '400px',
+            'target': '_blank'
         });
 
         map = new GMaps({
             div: '#map_canvas',
-            lat: -12.043333,
-            lng: -77.028333
+            lat: 10.001567167869842,  
+            lng: 76.29604407728762,
         });
         
         map.addMarker({
-            lat: -12.043333,
-            lng: -77.028333,
-            title: 'Lima',
+            lat: 10.001567167869842, 
+            lng: 76.29604407728762,
+            title: 'Royal College Of Managment Studies',
             click: function (e) {
                 alert('You clicked in this marker');
             }
