@@ -1077,13 +1077,13 @@ jQuery(function ($) {
 
         map = new GMaps({
             div: '#map_canvas',
-            lat: 10.001567167869842,  
-            lng: 76.29604407728762,
+            lat: 10.001778517992294, 
+            lng: 76.29591537671277,
         });
-        
+          
         map.addMarker({
-            lat: 10.001567167869842, 
-            lng: 76.29604407728762,
+            lat: 10.001778517992294,
+            lng: 76.29591537671277,
             title: 'Royal College Of Managment Studies',
             click: function (e) {
                 alert('You clicked in this marker');
