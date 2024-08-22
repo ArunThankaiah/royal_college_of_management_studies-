@@ -1066,31 +1066,31 @@ jQuery(function ($) {
 
     // GOOGLE MAP FOR CONTACT & EVENT PAGE.
 
-    if ($('#map_canvas').length) {
+    // if ($('#map_canvas').length) {
 
-        var map;
+    //     var map;
 
-        $('#map_canvas').css({
-            'height': '400px',
-            'target': '_blank'
-        });
+    //     $('#map_canvas').css({
+    //         'height': '400px',
+    //         'target': '_blank'
+    //     });
 
-        map = new GMaps({
-            div: '#map_canvas',
-            lat: 10.001778517992294, 
-            lng: 76.29591537671277,
-        });
+    //     map = new GMaps({
+    //         div: '#map_canvas',
+    //         lat: 10.005430293123744, 
+    //         lng: 76.29746542141356,
+    //     });
           
-        map.addMarker({
-            lat: 10.001778517992294,
-            lng: 76.29591537671277,
-            title: 'Royal College Of Managment Studies',
-            click: function (e) {
-                alert('You clicked in this marker');
-            }
-        });
+    //     map.addMarker({
+    //         lat: 10.005430293123744,
+    //         lng: 76.29746542141356,
+    //         title: 'Royal College Of Managment Studies',
+    //         click: function (e) {
+    //             alert('You clicked in this marker');
+    //         }
+    //     });
 
-    }
+    // }
     
     // VENOBOX VIDEO.
     
