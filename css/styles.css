@@ -1442,6 +1442,7 @@ a.nav-btn-highlight:hover {
 .main-header-2 .main-header {
   height: auto;
   width: 100%;
+ 
 }
 .main-header-2 .main-header .sticky-wrapper {
   background: rgba(0, 0, 0, 0);
@@ -1890,7 +1891,9 @@ a.nav-btn-highlight:hover {
 /***********************************************************************************************/
 /*----- 05.1 SLIDER ----*/
 .slider-wrap {
-  clear: both;
+  clear: both; 
+  position: relative;
+  z-index: 999; 
 }
 #slider_1 {
   text-align: center;
@@ -1908,6 +1911,8 @@ a.nav-btn-highlight:hover {
   background-repeat: no-repeat;
   background-size: cover;
   background: #000000;
+  
+  
 }
 #slider_1 .slider-content {
   position: absolute;

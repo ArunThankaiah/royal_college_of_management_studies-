@@ -1278,7 +1278,6 @@ jQuery(function ($) {
     //One Page Scrolling.
     smooth_scrolling();
 
-
     // BACK TO TOP BUTTON.
 
     if ($('#backTop').length === 1) {
@@ -1288,6 +1287,7 @@ jQuery(function ($) {
         });
         
     }
+    // 
 
     // PRELOADER
 
