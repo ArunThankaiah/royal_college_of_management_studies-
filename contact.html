@@ -174,7 +174,7 @@
 
     <!--  PAGE HEADING -->
 
-    <section class="page-header">
+    <!-- <section class="page-header">
 
         <div class="container">
 
@@ -194,11 +194,11 @@
 
                 </div>
 
-            </div> <!-- end .row  -->
+            </div> 
 
-        </div> <!-- end .container  -->
+        </div> 
 
-    </section> <!-- end .page-header  -->
+    </section>  -->
 
     <!--  MAIN CONTENT  -->
 
@@ -244,13 +244,20 @@
                                     placeholder="Email" data-msg="Please Write Your Valid Email" />
                             </div>
                             <div class="form-group">
-                                <input type="text" list="options" class="form-control" id="email_subject"
+                                <select type="text" list="options" class="custom-dropdown" id="email_subject"
                                     name="email_subject" placeholder="Subject"
-                                    data-msg="Please Write Your Message Subject" />
-                                <datalist id="options">
-                                    <option value="Technical Courses">
-                                    <option value="Management Courses">
-                                </datalist>
+                                    data-msg="Please Write Your Message Subject" >
+                                    <option value="" >Select a subject</option>
+                                    <option value="xraywelding">X-Ray Welding
+                                    </option>
+                                    <option value="hvacacmechanic">HVAC/AC Mechanic</option>
+                                    <option value="oliandgasengineering">Oil&amp;Gas Engineering</option>
+                                    <option value="mobiletechnology">Mobile Technology</option>
+                                    <option value="automobileengineering">Automobile Engineering</option>
+                                    <option value="logisticsandwarehousemanagement">Logistics &amp; Warehouse Management</option>
+                                    <option value="hotelmanagement">Hotel Management</option>
+                                    <option value="hospitaladministration">Hospital Administration</option>
+                                </select>
                             </div>
 
                             <div class="form-group">
