@@ -2253,6 +2253,9 @@ a.nav-btn-highlight:hover {
 .section-feat-about-us {
   position: relative;
   padding: 0;
+  background-color: #fff;
+  z-index: 2;
+  
 }
 .feat-img-side-bg {
   left: 0;
@@ -7814,3 +7817,32 @@ footer .social-icons a:hover {
 }
 
 /*# sourceMappingURL=styles.css.map */
+
+/* whtas app */
+.whats-app{
+  position: relative;
+}
+.whats-app a{
+  width: 60px;
+  position: fixed;
+  right: 20px;
+  bottom: 30%;
+  z-index: 1;
+  transition: 0.5s;
+  animation: vibrate 0.5s infinite;
+}
+
+@keyframes vibrate {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-2px); }
+  40% { transform: translateX(2px); }
+  60% { transform: translateX(-2px); }
+  80% { transform: translateX(2px); }
+  100% { transform: translateX(0); }
+}
+@media screen and (max-width: 556px){
+  .whats-app a{
+    width: 35px;
+    bottom: 20%;
+  }
+}
