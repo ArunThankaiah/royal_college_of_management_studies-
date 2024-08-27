@@ -1893,7 +1893,7 @@ a.nav-btn-highlight:hover {
 .slider-wrap {
   clear: both; 
   position: relative;
-  z-index: 999; 
+  z-index: 2; 
 }
 #slider_1 {
   text-align: center;
