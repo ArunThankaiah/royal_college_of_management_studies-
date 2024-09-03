@@ -110,7 +110,7 @@ ob_start(); // needs to be added here
 
                                 <div class="col-md-4 col-sm-4 clearfix">
                                     <a class="btn btn-theme btn-theme-invert no-border btn-square btn-header-cta margin-top-42 pull-right"
-                                        href="contact.html" title="GET APPOINTMENT">Register Now</a>
+                                        href="contact.php" title="GET APPOINTMENT">Register Now</a>
                                 </div><!-- end .col-md-4  -->
 
                             </div> <!-- end .row  -->
@@ -137,7 +137,7 @@ ob_start(); // needs to be added here
                                     </li>
                                 </ul>
                             </li>
-                            <li><a href="contact.html" class="link-active">Contact us</a></li>
+                            <li><a href="contact.php" class="link-active">Contact us</a></li>
                         </ul> <!-- end .nav .navbar-nav  -->
                     </div>
                     <div class="navbar-header pull-right">
@@ -234,83 +234,95 @@ ob_start(); // needs to be added here
                     <div class="contact-form-block">
 
                         <h2 class="contact-title">Register Now</h2>
- <?php
-// Enable error reporting for debugging
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+                        <?php
+                        // Enable error reporting for debugging
+                        error_reporting(E_ALL);
+                        ini_set('display_errors', 1);
 
-// Function to handle errors and log them
-function died($error) {
-    logMessage("Error: {$error}"); // Log the error message
-    echo "We are sorry, but there were errors with your form submission:<br /><br />";
-    echo $error . "<br /><br />";
-    echo "Please go back and fix these errors.<br />";
-    die();
-}
+                        // Function to handle errors and log them
+                        function died($error)
+                        {
+                            logMessage("Error: {$error}"); // Log the error message
+                            echo "We are sorry, but there were errors with your form submission:<br /><br />";
+                            echo $error . "<br /><br />";
+                            echo "Please go back and fix these errors.<br />";
+                            die();
+                        }
 
-// Function to log messages
-function logMessage($message) {
-    $logFile = 'path/to/your/logfile.log'; // Specify the path to your log file
-    $currentDate = date('Y-m-d H:i:s'); // Current date and time
-    $logMessage = "[{$currentDate}] - {$message}\n"; // Format your log message
-    file_put_contents($logFile, $logMessage, FILE_APPEND); // Write message to log file
-}
+                        // Function to log messages
+                        function logMessage($message)
+                        {
+                            $logFile = 'path/to/your/logfile.log'; // Specify the path to your log file
+                            $currentDate = date('Y-m-d H:i:s'); // Current date and time
+                            $logMessage = "[{$currentDate}] - {$message}\n"; // Format your log message
+                            file_put_contents($logFile, $logMessage, FILE_APPEND); // Write message to log file
+                        }
 
-// Check if the form is submitted
-if (isset($_POST['email2'])) {
-    $email_to = "info@royalinstitute.co.in";
-    $email_subject = "Enquire Now";
-    
-    // Initialize variables
-    $error_message = '';
-    $name = isset($_POST['name2']) ? trim($_POST['name2']) : '';
-    $email_from = isset($_POST['email2']) ? trim($_POST['email2']) : '';
-    $subject = isset($_POST['subject']) ? trim($_POST['subject']) : '';
-    $message = isset($_POST['message']) ? trim($_POST['message']) : '';
-    
-    // Validate form fields
-    $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
-    if (!preg_match($email_exp, $email_from)) {
-        $error_message .= 'The Email Address you entered does not appear to be valid.<br />';
-    }
-    
-    $string_exp = "/^[A-Za-z .'-]+$/";
-    if (!preg_match($string_exp, $name)) {
-        $error_message .= 'The Name you entered does not appear to be valid.<br />';
-    }
-    
-    if (strlen($error_message) > 0) {
-        died($error_message);
-    }
+                        // Check if the form is submitted
+                        if (isset($_POST['email2'])) {
+                            $email_to = "info@royalinstitute.co.in";
+                            $email_subject = "Enquire Now";
 
-    // Function to clean strings for email content
-    function clean_string($string) {
-        $bad = array("content-type", "bcc:", "to:", "cc:", "href");
-        return str_replace($bad, "", $string);
-    }
+                            // Initialize variables
+                            $error_message = '';
+                            $name = isset($_POST['name2']) ? trim($_POST['name2']) : '';
+                            $email_from = isset($_POST['email2']) ? trim($_POST['email2']) : '';
+                            $phone = isset($_POST['phone']) ? trim($_POST['phone']) : ''; // New phone number field
+                            $subject = isset($_POST['subject']) ? trim($_POST['subject']) : '';
+                            $message = isset($_POST['message']) ? trim($_POST['message']) : '';
 
-    // Create email message
-    $email_message = "Name: " . clean_string($name) . "\n";
-    $email_message .= "Email: " . clean_string($email_from) . "\n";
-    $email_message .= "Subject: " . clean_string($subject) . "\n";
-    $email_message .= "Message: " . clean_string($message) . "\n";
-    
-    // Create email headers
-    $headers = 'From: ' . $email_from . "\r\n" .
-               'Reply-To: ' . $email_from . "\r\n" .
-               'X-Mailer: PHP/' . phpversion();
-    
-    // Attempt to send the email and log success or failure
-    if (mail($email_to, $email_subject, $email_message, $headers)) {
-        logMessage("Email sent successfully to {$email_to}.");
-        header("Location: thankyou.php");
-        die();
-    } else {
-        logMessage('Failed to send email.');
-        died('There was an error sending the email.');
-    }
-}
-?>
+                            // Validate form fields
+                            $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
+                            if (!preg_match($email_exp, $email_from)) {
+                                $error_message .= 'The Email Address you entered does not appear to be valid.<br />';
+                            }
+
+                            $string_exp = "/^[A-Za-z .'-]+$/";
+                            if (!preg_match($string_exp, $name)) {
+                                $error_message .= 'The Name you entered does not appear to be valid.<br />';
+                            }
+
+                            // Basic phone number validation (you can adjust this regex as needed)
+                            $phone_exp = '/^\+?[0-9]{10,15}$/';
+                            if (!preg_match($phone_exp, $phone)) {
+                                $error_message .= 'The Phone Number you entered does not appear to be valid.<br />';
+                            }
+
+                            if (strlen($error_message) > 0) {
+                                died($error_message);
+                            }
+
+                            // Function to clean strings for email content
+                            function clean_string($string)
+                            {
+                                $bad = array("content-type", "bcc:", "to:", "cc:", "href");
+                                return str_replace($bad, "", $string);
+                            }
+
+                            // Create email message
+                            $email_message = "Name: " . clean_string($name) . "\n";
+                            $email_message .= "Email: " . clean_string($email_from) . "\n";
+                            $email_message .= "Phone: " . clean_string($phone) . "\n"; // Add phone number
+                            $email_message .= "Subject: " . clean_string($subject) . "\n";
+                            $email_message .= "Message: " . clean_string($message) . "\n";
+
+                            // Create email headers
+                            $headers = 'From: ' . $email_from . "\r\n" .
+                                'Reply-To: ' . $email_from . "\r\n" .
+                                'X-Mailer: PHP/' . phpversion();
+
+                            // Attempt to send the email and log success or failure
+                            if (mail($email_to, $email_subject, $email_message, $headers)) {
+                                logMessage("Email sent successfully to {$email_to}.");
+                                header("Location: thankyou.php");
+                                die();
+                            } else {
+                                logMessage('Failed to send email.');
+                                died('There was an error sending the email.');
+                            }
+                        }
+                        ?>
+
                         <form role="form" action="#" method="post" id="contact-form">
 
                             <div class="form-group">
@@ -323,10 +335,15 @@ if (isset($_POST['email2'])) {
                                     placeholder="Email" data-msg="Please Write Your Valid Email" />
                             </div>
                             <div class="form-group">
+                                <input type="text" class="form-control" id="phone" name="phone"
+                                    placeholder="Phone Number" data-msg="Please Write Your Valid Email" />
+                            </div>
+
+                            <div class="form-group">
                                 <select type="text" list="options" class="custom-dropdown" id="email_subject"
                                     name="subject" placeholder="Subject"
-                                    data-msg="Please Write Your Message Subject" >
-                                    <option value="" >Select a subject</option>
+                                    data-msg="Please Write Your Message Subject">
+                                    <option value="">Select a subject</option>
                                     <option value="xraywelding">X-Ray Welding
                                     </option>
                                     <option value="hvacacmechanic">HVAC/AC Mechanic</option>
@@ -425,11 +442,11 @@ if (isset($_POST['email2'])) {
 
 
     <!-- START FOOTER  -->
-       <!-- whtas app -->
-       <div class="whats-app">
+    <!-- whtas app -->
+    <div class="whats-app">
         <a href="https://api.whatsapp.com/send?phone=919562978462"><img src="./images/call.png" alt="Get in touch" class="whats-app-img"></a>
     </div>
-     <!-- whtas app -->
+    <!-- whtas app -->
 
     <footer class="section-pure-black-bg">
 
@@ -461,7 +478,7 @@ if (isset($_POST['email2'])) {
                                     <div class="social-icons margin-top-24">
 
                                         <a href="https://www.instagram.com/royal_college_cochin/" target="_blank">
-                                            <i class="fa fa-brands fa-instagram"></i> 
+                                            <i class="fa fa-brands fa-instagram"></i>
                                             <!-- <i class="fa-brands fa-instagram"></i> -->
                                         </a>
 
@@ -511,7 +528,8 @@ if (isset($_POST['email2'])) {
 
                                     <i class="fa fa-phone fa-contact"></i>
                                     <p><a href="https://api.whatsapp.com/send?phone=919562978462">+919562978462</a> <br>
-                                        <a href="https://api.whatsapp.com/send?phone=918943393331">+918943393331</a></p>
+                                        <a href="https://api.whatsapp.com/send?phone=918943393331">+918943393331</a>
+                                    </p>
 
                                 </div>
 
@@ -595,7 +613,7 @@ if (isset($_POST['email2'])) {
                                         </li>
 
                                         <li>
-                                            <a href="contact.html">
+                                            <a href="contact.php">
                                                 <i class="fa fa-caret-right fa-footer"></i>
                                                 Contat US
                                             </a>
